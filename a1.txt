@@ -1,0 +1,490 @@
+var etid: EditText =findViewById(R.id.editTextTextPersonName);
+var etpass: EditText =findViewById(R.id.editTextTextPassword);
+var btn: Button =findViewById(R.id.btnlogin);
+
+
+
+btn.setOnClickListener{
+
+    var nm=etid.text.toString();
+    var ps=etpass.text.toString();
+    if (nm=="kamini" && ps=="kamini") {
+
+        var intent = Intent(this, MainActivity2::class.java)
+        intent.putExtra("name", nm)
+        startActivity(intent)
+
+    }
+}
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Bca_form">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration Form For BCA"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/teal_700"
+            android:textSize="40dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="ID:"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/bid"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Name:"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/mname"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+            </EditText>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/mgender"
+                android:layout_width="102dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:text="Gender:"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/bmale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="20dp">
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/bfemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="20dp">
+                </RadioButton>
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/mmob"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Mobile:"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/bmob"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mdoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Document:"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="326dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/mssc"
+                    android:layout_width="68dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:text="SSC"
+                    android:textSize="15dp"
+                    android:textStyle="bold">
+
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/mhsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="HSC"
+                    android:textSize="15dp"
+                    android:textStyle="bold">
+
+
+                </CheckBox>
+
+                <CheckBox
+                    android:id="@+id/mlc"
+                    android:layout_width="76dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:text="L.c"
+                    android:textSize="15dp"
+                    android:textStyle="bold">
+                </CheckBox>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="104dp"
+                android:layout_height="match_parent"
+                android:text="Cast"
+                android:textColor="@color/black"
+                android:textSize="23dp"></TextView>
+
+            <Spinner
+                android:id="@+id/sp"
+                android:layout_width="269dp"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btninsert"
+                android:layout_width="136dp"
+                android:layout_height="63dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="INSERT"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnupdate"
+                android:layout_width="156dp"
+                android:layout_height="62dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:text="UPDATE"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnsd"
+                android:layout_width="240dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:text="SHOW DATA"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="40dp">
+        </TextView>
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+
+package com.example.riya1
+
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+
+class dbhelper(context:Context):SQLiteOpenHelper(context,"data",null,1) {
+    override fun onCreate(p0: SQLiteDatabase?) {
+        val create_table = "CREATE TABLE STDINFO(sid INTEGER PRIMARY KEY,sname TEXT, smob BIGINTEGER,sgender TEXT, scast TEXT, sdoc TEXT)"
+        p0?.execSQL(create_table)
+        val create_table1 = "CREATE TABLE MCA(sname TEXT, smob BIGINTEGER,sgender TEXT, scast TEXT, sdoc TEXT)"
+        p0?.execSQL(create_table)
+    }
+
+    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
+       val drop_table = "DROP TABLE IF EXISTS STDINFO"
+        p0?.execSQL(drop_table)
+        onCreate(p0)
+
+        val drop_table1 = "DROP TABLE IF EXISTS MCA"
+        p0?.execSQL(drop_table)
+        onCreate(p0)
+    }
+
+}
+
+
+
+
+
+var etid: EditText =findViewById(R.id.editTextTextPersonName);
+var etpass: EditText =findViewById(R.id.editTextTextPassword);
+var btn: Button =findViewById(R.id.btnlogin);
+
+
+
+btn.setOnClickListener{
+
+    var nm=etid.text.toString();
+    var ps=etpass.text.toString();
+    if (nm=="kamini" && ps=="kamini") {
+
+        var intent = Intent(this, MainActivity2::class.java)
+        intent.putExtra("name", nm)
+        startActivity(intent)
+
+    }
+}
+
+
+
+
+
+
+package com.example.riya1
+
+import android.annotation.SuppressLint
+import android.content.ContentValues
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
+import android.os.Build
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.*
+import androidx.annotation.RequiresApi
+
+class Bca_form : AppCompatActivity() {
+    val castarry: Array<String> = arrayOf("Select Cast", "OBC", "General", "SC", "ST",)
+    lateinit var sel: String
+    var doc: String = ""
+    var msg: String = " "
+    lateinit var vgender: String
+
+    @SuppressLint("MissingInflatedId")
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_bca_form)
+
+        var id: EditText = findViewById(R.id.bid)
+        var name: EditText = findViewById(R.id.mname)
+        var gm: RadioButton = findViewById(R.id.bmale)
+        var gf: RadioButton = findViewById(R.id.bfemale)
+        var mob: EditText = findViewById(R.id.bmob)
+        var c1: CheckBox = findViewById(R.id.mssc)
+        var c2: CheckBox = findViewById(R.id.mhsc)
+        var c3: CheckBox = findViewById(R.id.mlc)
+        var sp1: Spinner = findViewById(R.id.sp)
+        var bins: Button = findViewById(R.id.btninsert)
+        var bupd: Button = findViewById(R.id.btnupdate)
+        var bsd: Button = findViewById(R.id.btnsd)
+        var etvd: TextView = findViewById(R.id.tv1)
+
+        c1.setOnClickListener {
+            doc = doc + "SSC, "
+        }
+        c2.setOnClickListener {
+            doc = doc + "HSC, "
+        }
+        c3.setOnClickListener {
+            doc = doc + "LC "
+        }
+        gm.setOnClickListener {
+            vgender = "Male"
+        }
+        gf.setOnClickListener {
+            vgender = "Female"
+        }
+
+
+        val adapter: ArrayAdapter<String> =
+            ArrayAdapter<String>(this, android.R.layout.select_dialog_item, castarry)
+        sp1.setAdapter(adapter)
+        sp1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(
+                    applicationContext,
+                    "You have selected " + castarry[position],
+                    Toast.LENGTH_SHORT
+                ).show()
+                sel = sp1.selectedItem.toString()
+
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+
+
+        }
+
+
+        var helper = dbhelper(applicationContext)
+        var db: SQLiteDatabase = helper.writableDatabase
+
+        bins.setOnClickListener {
+            var cv = ContentValues()
+            cv.put("sid", id.text.toString())
+            cv.put("sname", name.text.toString())
+            cv.put("smob", mob.text.toString())
+            cv.put("sgender", vgender)
+            cv.put("scast", sel)
+            cv.put("sdoc", doc)
+
+            var rs: Long = db.insert("STDINFO", null, cv)
+            Toast.makeText(this@Bca_form, "saved", Toast.LENGTH_SHORT).show()
+
+            bsd.setOnClickListener {
+                var rs: Cursor = db.rawQuery("SELECT * FROM STDINFO", null)
+                if (etvd.text == "") {
+                    while (rs.moveToNext()) {
+                        etvd.text =
+                            etvd.text.toString() + rs.getString(0) +
+                                    "\t" + rs.getString(1) +
+                                    "\t" + rs.getString(2)+"\t"+
+                                    "\t" + rs.getString(3)+
+                                    "\t" +rs.getString(4)+
+                                    "\t" +rs.getString(5)+ "\t"+"\n"
+                    }
+                } else {
+                    etvd.text = ""
+                    while (rs.moveToNext()) {
+                        etvd.text =
+                           etvd.text.toString() + rs.getString(0) +
+                                   "\t" + rs.getString(1) +
+                                   "\t" + rs.getString(2)+
+                                   "\t" + rs.getString(3)+
+                                   "\t" +rs.getString(4)+
+                                   "\t" +rs.getString(5)+ "\t"+"\n"
+                    }
+                }
+            }
+
+
+        }
+    }
+}
